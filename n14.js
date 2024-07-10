@@ -1,5 +1,5 @@
 const express = require("express");
-const logger = requrie("morgan");
+const logger = require("morgan");
 const fs = require("fs");
 const app = express();
 const port = 3000;
@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/list", (req, res) => {
-  fs.readdir(__dirname, "utf-8", (err, files) => {
+  fs.readdir(__dirname, "utf-8", (err, data) => {
     res.send(data);
   });
 });
